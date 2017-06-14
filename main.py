@@ -1,0 +1,19 @@
+'''./main.py'''
+from model.meeting import Meeting
+from flask import Flask
+from flask import request
+app = Flask(__name__)
+
+
+@app.route('/')
+# hello world
+def hello_world():
+    return 'Hello, World!'
+
+
+@app.route('/meeting', methods=['GET', 'POST', 'PUT', 'DEL'])
+def controller_meeting():
+    if request.method == 'GET':
+        curr_meeting = Meeting(
+            start_time="0:00 AM", end_time="12:00 AM", id_meeting="123", name_meeting="hello")
+        return curr_meeting.print_info_meeting()

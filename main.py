@@ -11,9 +11,15 @@ def hello_world():
     return 'Hello, World!'
 
 
-@app.route('/meeting', methods=['GET', 'POST', 'PUT', 'DEL'])
+@app.route('/meeting', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def controller_meeting():
     if request.method == 'GET':
         curr_meeting = Meeting(
             start_time="0:00 AM", end_time="12:00 AM", id_meeting="123", name_meeting="hello")
         return curr_meeting.print_info_meeting()
+    if request.method == 'POST':
+        return 'POST'
+    if request.method == 'PUT':
+        return 'PUT'
+    if request.method == 'DELETE':
+        return 'DELETE'

@@ -1,4 +1,6 @@
-class course:
+'''./model/Course.py'''
+class Course:
+    ''' this module use for managing Course in company'''
     # id_course      : id of course
     # name_course    : name of course
     # course_teacher : list teacher can teach this course

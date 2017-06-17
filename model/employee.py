@@ -1,4 +1,6 @@
-class employee:
+'''./model/Employee.py'''
+class Employee:
+    ''' this module use for employee in company'''
     # id_employee   : id number of employee
     # short_name    : short name in company
     # id_team       : id number of team belong to this employee

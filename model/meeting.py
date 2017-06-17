@@ -1,4 +1,4 @@
-'''./Meeting.py'''
+'''./model/Meeting.py'''
 
 
 class Meeting:
@@ -23,7 +23,10 @@ class Meeting:
                       ', ' + self.start_time + ', ' + self.end_time)
         return infomation
 
-    @classmethod
-    def get_count_meeting(cls):
+    def get_count_meeting(self):
         '''this function use for count how many meeting created'''
         return Meeting.count_meeting
+
+    def get_id_meeting(self):
+        '''' this function use for get id meeting '''
+        return self.id_meeting
